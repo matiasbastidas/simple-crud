@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Simple-CRUD
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();enviarFormulario();" autocomplete="off">
+                    <div>
+                        <label>Nombre Completo*</label><label class="validation-error hide" id="errorValidacionnombreCompleto">Este campo es requerido.</label>
+                        <input type="text" name="nombreCompleto" id="nombreCompleto">
+                    </div>
+                    <div>
+                        <label>Cargo</label>
+                        <input type="text" name="cargo" id="cargo">
+                    </div>
+                    <div>
+                        <label>Sueldo</label>
+                        <input type="text" name="sueldo" id="sueldo">
+                    </div>
+                    <div>
+                        <label>Ciudad</label>
+                        <input type="text" name="ciudad" id="ciudad">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="lista" id="listaEmpleados">
+                    <thead>
+                        <tr>
+                            <th>Nombre Completo</th>
+                            <th>Cargo</th>
+                            <th>Sueldo</th>
+                            <th>Ciudad</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
